@@ -1,0 +1,151 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: hsl(0, 100%, 74%); 
+    z-index: 0;
+}
+/* --------------- */
+section {
+    margin-top: 3rem;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg-intro-desktop.png);
+    z-index: 1;
+}
+
+.description {
+    width: 500px;
+    max-width: 90%;
+    align-self: center;
+    z-index: 2;
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.formDiv {
+    width: 470px;
+    max-width: 90%;
+    z-index: 2;
+}
+.cost {
+    background: hsl(248, 32%, 49%);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.cost span {
+    font-weight: 600;
+
+}
+.registrationForm {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.form-control {
+    margin: auto;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.form-control input {
+    width: 100%;
+    padding: 0.8rem;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: hsl(246, 25%, 77%);
+    outline: none;
+    font-weight: 700;
+}
+.form-control.failure input{
+    border-color: hsl(0, 100%, 74%);
+    
+}
+
+.errorText {
+    font-size: 0.7rem;
+    display: none;
+    padding: 0.3rem 0rem;
+    color: hsl(0, 100%, 74%);
+}
+.form-control.failure .errorText {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.errorImg {
+    position: absolute;
+    width: 22px;
+    top: 12px;
+    right: 20px;
+    display: none;
+}
+.form-control.failure .errorImg {
+     display: inline-block;
+}
+
+
+.submitBtn {
+    width: 100%;
+    height: 50px;
+    background: hsl(154, 59%, 51%);
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+   
+}
+
+.agreement {
+    color: hsl(246, 25%, 77%);
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+.agreement a{
+    color: hsl(0, 100%, 74%);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+/* queries */
+@media (max-width: 1080px) {
+    html {
+        font-size: 80%;
+    }
+    section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    section::after {
+        background: url(../img/bg-intro-mobile.png);
+    }
+    .description {
+        margin-bottom: 2rem;
+    }
+    .registrationForm {
+        margin-bottom: 2rem;
+    }
+}
